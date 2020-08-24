@@ -9,7 +9,7 @@ export const getAllRestaurants = () => (dispatch) => {
     axios.get(`http://localhost:5000/api/restaurants`)
     .then(res => {
         console.log(res)
-        dispatchEvent({
+        dispatch({
             type: GET_RESTAURANTS,
             payload: res.data
         })

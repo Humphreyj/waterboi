@@ -4,7 +4,7 @@ import {
 
 const initialState = {
     
-    restaurants: {}
+    restaurants: []
 }
 
 const restaurantReducer = (state = initialState, action) => {

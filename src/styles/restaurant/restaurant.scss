@@ -1,6 +1,7 @@
 .restaurant-container {
     height: 80px;
-    border: 1px solid black;
+    border-top: .5px solid rgba(0,0,0,0.2);
+    border-bottom: .5px solid rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -11,13 +12,15 @@
     .restaurant-info {
         width: 70%;
         padding: 0 5px;
-        border: 1px solid black;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         p {
             margin-top: 0;
             margin-bottom: 0;
+        }
+        .restaurant-name {
+            font-size: 1.17em;
         }
     };
 }

@@ -1,0 +1,52 @@
+.main-nav {
+    height: 40px;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    .menu {
+        position: relative;
+        margin-top: 8px;
+        .toggle {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 1.5em;
+            color: white;
+            transition: all .3s ease;
+        }
+        .open {
+            transform: rotate(-90deg);
+            transition: all .3s ease;
+        }
+        .menu-modal {
+            position: absolute;
+            margin-top: 1.6em;
+            top: 8%;
+            right: 12%;
+            height: 0px;
+            width: 70px;
+            transition: all .3s ease;
+            opacity: 0;
+            p {
+                background-color: rgba(0,0,0,0.75);
+                font-weight: bold;
+            }
+            
+        }
+        .open-modal {
+            width: 70px;
+            height: 100%;
+            color: white;
+            display: inline;
+            transition: all .7s ease;
+            opacity: 1;
+            p {
+                background-color: rgba(0,0,0,0.75);
+                font-weight: bold;
+            }
+        }
+        
+       
+    }
+        
+}

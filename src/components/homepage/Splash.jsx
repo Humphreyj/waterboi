@@ -1,17 +1,22 @@
-import React,{useEffect} from 'react';
-
+import React,{useState,useEffect} from 'react';
+import {connect} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import {getAllRestaurants} from '../../Redux/actions/restaurantActions';
 
 import Featured from './Featured'
 import Freshest from './Freshest';
 
-const Splash = () => {
+const Splash = (props) => {
 
         const dispatch = useDispatch();
+        
         useEffect(() => {
             dispatch(getAllRestaurants())
+            console.log(props)
         },[])
+
+        
+
 
     return (
         <div className='splash-page'>
@@ -34,5 +39,9 @@ const Splash = () => {
         </div>
     );
 }
-
-export default Splash;
+const mapStateToProps = (state) => {
+    return {
+        state: state.resto.restaurants
+    }
+}
+export default connect(mapStateToProps)(Splash);

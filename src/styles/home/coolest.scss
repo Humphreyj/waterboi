@@ -1,0 +1,22 @@
+.coolest-container {
+    .coolest-title {
+        text-align: center;
+        font-size: 1.1em;
+        margin: 0 auto;
+    }
+    .button-box {
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        .see-all {
+            margin-bottom: 10px;
+            background-color: dodgerblue;
+            color: white;
+            border: .25px solid #333;
+            border-radius: 5px;
+            width: 75px;
+            height: 30px;
+            font-size: 1.1em;
+        }
+    }
+}
