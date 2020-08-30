@@ -18,7 +18,11 @@
             transform: rotate(-90deg);
             transition: all .3s ease;
         }
+
         .menu-modal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             position: absolute;
             margin-top: 1.6em;
             top: 8%;
@@ -27,26 +31,35 @@
             width: 70px;
             transition: all .3s ease;
             opacity: 0;
-            p {
-                background-color: rgba(0,0,0,0.75);
+            background-color: rgba(0,0,0, 0.3);
+            
+            a {
+                
                 font-weight: bold;
+                color: black;
             }
             
         }
         .open-modal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             width: 70px;
-            height: 100%;
+            height: 150px;
             color: white;
-            display: inline;
+            background-color: rgba(0,0,0, 0.7);
+            border: 2px solid black;
             transition: all .7s ease;
             opacity: 1;
-            p {
-                background-color: rgba(0,0,0,0.75);
+            a {
+                
                 font-weight: bold;
+                color: white;
+                margin: 10px 0;
             }
         }
-        
        
     }
+
         
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Restaurant from './Restaurant';
 
@@ -19,7 +20,10 @@ const Featured = (props) => {
                     )
                 })}
                 <div className="button-box">
-                    <button className="see-all">See All</button>
+                    <Link to='/restaurants'>
+                        <button className="see-all">See All</button>
+                    </Link>
+                    
                 </div>
             </section>
     );

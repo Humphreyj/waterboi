@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {Link} from 'react-router-dom';
 
 const Navigation = () => {
     const [drawerIsOpen,setDrawerIsOpen] = useState(false)
@@ -9,9 +10,9 @@ const Navigation = () => {
                 onClick={()=>setDrawerIsOpen(!drawerIsOpen)}
                 ></i>
                 <div className={drawerIsOpen ? "menu-modal open-modal" : "menu-modal"}>
-                    <p>Login</p>
-                    <p>Nearby</p>
-                    <p>Add Business</p>
+                    <Link to='/' onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>Home</Link>
+                    <Link to='/' onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>Login</Link>
+                    <Link to='/' onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>Signup</Link>
                 </div>
             </div>
             
