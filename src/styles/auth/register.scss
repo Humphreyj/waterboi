@@ -1,0 +1,27 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+        margin-top: 45px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input {
+            margin: 10px 0;
+            width: 100%;
+            font-size: 1.3em;
+        }
+
+        .register-button {
+            font-size: 1.3em;
+            padding: 1%;
+            width: 100%;
+            margin-top: 25px;
+        }
+    }
+}

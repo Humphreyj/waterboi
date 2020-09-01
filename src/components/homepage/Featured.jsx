@@ -4,8 +4,10 @@ import {connect} from 'react-redux';
 import Restaurant from './Restaurant';
 
 const Featured = (props) => {
-    const coolest = props.state.slice(0,3)
-    console.log(props)
+    const newArr = [...props.state]
+    const sorted = newArr.sort((a,b) =>  a.average_rating < b.average_rating ? 1 : -1)
+    const coolest = sorted.slice(0,3)
+    console.log(sorted)
     return (
         <section className="coolest-container">
                 <h6 className='coolest-title'>This weeks coolest waters.</h6>
@@ -14,7 +16,7 @@ const Featured = (props) => {
                     return(
                         <Restaurant 
                         name={item.name}
-                        rating={item.rating}
+                        rating={item.average_rating}
                         location={item.location}
                         />
                     )

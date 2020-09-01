@@ -3,7 +3,7 @@ import './App.css';
 import Navigation from './components/UI/Navigation';
 import Routes from './Routes/Routes';
 import {BrowserRouter as Router} from 'react-router-dom';
-import Footer from './components/UI/Footer';
+import Login from './components/auth/Login';
 import './styles/global.scss';
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <Navigation />
+        <Login />
       <Routes />
       
     </div>

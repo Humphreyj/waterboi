@@ -1,11 +1,16 @@
 import {
     REGISTER_SUCCESS,
     REGISTER_FAILURE,
+    LOGIN_TOGGLE,
     LOGIN_SUCCESS,
-    LOGIN_FAILURE
+    LOGIN_FAILURE,
+    LOGOUT,
+    LOGGED_IN
 } from '../types';
 
 const initialState = {
+    
+    loggingIn: false,
     loggedIn: false,
     error: null,
     data: {}
@@ -13,6 +18,16 @@ const initialState = {
 
 const authReducer = (state = initialState, action) => {
     switch  (action.type) {
+        case LOGGED_IN:
+            return {
+                ...state,
+                loggedIn: true
+            }
+        case LOGIN_TOGGLE:
+            return {
+                ...state,
+                loggingIn: !state.loggingIn
+            }
         case LOGIN_SUCCESS:
             return {
                 ...state,
@@ -33,6 +48,12 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload
+            }
+        case LOGOUT:
+            return {
+                ...state,
+                data: {},
+                loggedIn: false
             }
         default: return state;
     }

@@ -1,0 +1,18 @@
+.review-container {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid black;
+    padding-left: 10px;
+    .display-name {
+        all: unset;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: 8px auto;
+    }
+    .review-content {
+        margin: 0 auto;
+    }
+    .rating {
+        margin: 5px 0;
+    } 
+}

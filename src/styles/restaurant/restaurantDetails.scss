@@ -1,0 +1,30 @@
+.restaurant-details {
+    
+    .primary-info {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            margin: 45px 20px 0 10px;
+
+        }
+        div {
+            
+            h4 {
+                margin: 0 auto;
+            }
+            .restaurant-name {
+                font-size: 1.4em;
+                margin-top: 45px;
+                
+            }
+            .location {
+                font-size: 1em;
+            }
+        }
+    }
+}

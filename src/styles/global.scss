@@ -2,7 +2,16 @@
 
 @import './home/splash.scss';
 @import './home/coolest.scss';
+
 @import './restaurant/allRestaurants.scss';
 @import './restaurant/restaurant.scss';
+@import './restaurant/restaurantDetails.scss';
 
 @import './ui/footer.scss';
+
+//auth
+@import './auth/login.scss';
+@import './auth/register.scss';
+
+//reviews
+@import './reviews/review.scss';

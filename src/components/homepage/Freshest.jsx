@@ -11,7 +11,7 @@ const Freshest = (props) => {
                     return(
                         <Restaurant 
                         name={item.name}
-                        rating={item.rating}
+                        rating={item.average_rating}
                         location={item.location}
                         />
                     )

@@ -1,19 +1,20 @@
-import React,{useState,useEffect} from 'react';
+import React,{useEffect} from 'react';
 import {connect,useDispatch} from 'react-redux';
 
 import {getAllRestaurants} from '../../Redux/actions/restaurantActions';
+
 
 import Featured from './Featured'
 import Freshest from './Freshest';
 
 const Splash = (props) => {
-
+        let token = localStorage.getItem('token')
         const dispatch = useDispatch();
-        
         useEffect(() => {
             dispatch(getAllRestaurants())
+ 
             console.log(props)
-        },[])
+        },[dispatch])
 
         
 
@@ -41,7 +42,9 @@ const Splash = (props) => {
 }
 const mapStateToProps = (state) => {
     return {
-        state: state.resto.restaurants
+        state: state.resto.restaurants,
+        user: state.auth.data,
+        loggedIn: state.auth.loggedIn
     }
 }
 export default connect(mapStateToProps)(Splash);

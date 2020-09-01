@@ -13,7 +13,7 @@ const AllRestaurants = (props) => {
     let newList = [];
 
     useEffect(() => {
-        if (props.state.length == 0) {
+        if (props.state.length === 0) {
             dispatch(getAllRestaurants())
         }
     },[])
@@ -23,9 +23,9 @@ const AllRestaurants = (props) => {
     },[all])
 
     useEffect(() => {
-        if(input != '') {
+        if(input !== '') {
 			newList = all.filter(item => {
-					return item.name.toLowerCase().indexOf(input.toLowerCase()) != -1
+					return item.name.toLowerCase().indexOf(input.toLowerCase()) !== -1
 			})
 			setRestaurantMaster(newList)
 			
@@ -36,7 +36,12 @@ const AllRestaurants = (props) => {
     //Filters the list of restaurants based on the search term.
     const handleChange = (e) => {
 		setInput(e.target.value);		
-	};
+    };
+    
+    const selectRestaurant = (id) => {
+        props.history.push(`/restaurants/${id}`);
+        console.log(props)
+    }
    
     return (
         <div className='all-restaurants'>
@@ -50,8 +55,9 @@ const AllRestaurants = (props) => {
                 restaurantMaster?.map(item => {
                     return (
                         <Restaurant 
+                        click={()=>selectRestaurant(item.id)}
                         name={item.name}
-                        rating={item.rating}
+                        rating={item.average_rating}
                         location={item.location}
                         />
                     )

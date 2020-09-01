@@ -1,10 +1,16 @@
 import {
-    GET_RESTAURANTS
+    GET_RESTAURANTS, 
+    GET_SINGLE_RESTAURANT,
+    GET_RESTAURANT_REVIEWS
 } from '../types';
 
 const initialState = {
     
-    restaurants: []
+    restaurants: [],
+    restaurant: {},
+    reviews: [],
+
+
 }
 
 const restaurantReducer = (state = initialState, action) => {
@@ -14,6 +20,16 @@ const restaurantReducer = (state = initialState, action) => {
                 ...state,
                 restaurants: action.payload
             };
+        case GET_SINGLE_RESTAURANT:
+            return {
+                ...state,
+                restaurant: action.payload
+            }
+        case GET_RESTAURANT_REVIEWS:
+            return {
+                ...state,
+                reviews: action.payload
+            }
       
         default: return state;
     }
