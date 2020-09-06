@@ -46,7 +46,7 @@ export const userLogin = (userData) => (dispatch) => {
             .post(`http://localhost:5000/api/auth/login`, userData)
             .then(res => {
                 console.log(res.data)
-                localStorage.setItem('token', res.data.token)
+                
                 dispatch({
                     type: LOGIN_SUCCESS,
                     payload: res.data
@@ -67,6 +67,7 @@ export const logout = () => (dispatch) => {
             .get('http://localhost:5000/api/auth/logout')
             .then(res => {
                 console.log(res)
+                localStorage.clear()
                 window.location = '/'
                 dispatch({
                     type: LOGOUT

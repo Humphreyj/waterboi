@@ -24,6 +24,9 @@ const Navigation = (props) => {
                     <Link to='/' onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>Home</Link>
                     {props.loggedIn ? <p onClick={userLogout}>LOGOUT</p> :<p onClick={showLogin}>Login</p>}
                     {props.loggedIn ? null :<Link to='/register' onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>Signup</Link>}
+
+                    {/* if logged in display link to profile. */}
+                {props.loggedIn ? <Link to={`/profile/${props.user.display}/${props.user.id}`} onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>My Profile</Link> : null}
                 </div>
             </div>
             
@@ -34,7 +37,8 @@ const Navigation = (props) => {
 const mapStateToProps = (state) => {
     return {
         loggingIn: state.auth.loggingIn,
-        loggedIn: state.auth.loggedIn
+        loggedIn: state.auth.loggedIn,
+        user: state.auth.data
     }
 }
 

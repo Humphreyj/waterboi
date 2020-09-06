@@ -10,9 +10,10 @@ const Freshest = (props) => {
         {freshest?.map(item => {
                     return(
                         <Restaurant 
-                        name={item.name}
+                        name={item.restaurant_name}
+                        location={item.address}
                         rating={item.average_rating}
-                        location={item.location}
+                        
                         />
                     )
                 })}

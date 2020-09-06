@@ -10,6 +10,7 @@ const Restaurant = (props) => {
                 <p className='restaurant-name' >{props.name}</p>
                 <p className='restaurant-location'>{props.location}</p>
                 <StarRatingComponent 
+                className = 'stars'
                 name="rate1" 
                 starCount={5}
                 value={props.rating}

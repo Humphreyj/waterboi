@@ -25,7 +25,7 @@ CREATE TABLE reviews (
 
 
 
-INSERT INTO restaurants(id,name,location,price_range) values(1,'Jack Allen','Austin, Tx',5);
+INSERT INTO restaurants(id,restaurant_name,address,price_range) values(1,'Jack Allen','Austin, Tx',5);
 
 INSERT INTO restaurants(id,name,location,price_range) values(0,'Hoovers','Austin, Tx',3);
 #update a restaurants

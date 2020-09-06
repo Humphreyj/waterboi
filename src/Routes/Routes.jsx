@@ -6,6 +6,8 @@ import RestaurantDetails from '../components/restaurants/RestaurantDetails';
 import Register from '../components/auth/Register';
 import Login from '../components/auth/Login';
 
+import UserProfile from '../components/user/UserProfile';
+
 
 const Routes = (props) => {
     return (
@@ -17,6 +19,10 @@ const Routes = (props) => {
             {/* //Auth */}
             <Route path = '/login' component={Login} />
             <Route path = '/register' component={Register} />
+
+            {/* USER */}
+            <Route path = '/profile/:display_name/:id' component={UserProfile} />
+            
             
 
         </>

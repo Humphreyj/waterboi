@@ -1,6 +1,6 @@
 import axios from 'axios';
 import toastr from 'toastr';
-import {axiosAuth} from '../../tools/auth';
+import axiosAuth from '../../tools/auth';
 
 import {
     GET_RESTAURANTS, 
@@ -51,9 +51,9 @@ export const getRestaurantReviews = (id) => (dispatch) => {
 }
 
 export const addNewReview = (id,newReview) => (dispatch) => {
-    axiosAuth().post(`http://localhost:5000/api/restaurants/${id}/reviews`, newReview)
+    axiosAuth.post(`http://localhost:5000/api/restaurants/${id}/reviews`, newReview)
     .then(res => {
-       
+       console.log(res)
         
     })
     .catch(err => {

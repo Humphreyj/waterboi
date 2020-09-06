@@ -56,9 +56,9 @@ const AllRestaurants = (props) => {
                     return (
                         <Restaurant 
                         click={()=>selectRestaurant(item.id)}
-                        name={item.name}
+                        name={item.restaurant_name}
+                        location={item.address}
                         rating={item.average_rating}
-                        location={item.location}
                         />
                     )
                 })

@@ -9,7 +9,13 @@ import Freshest from './Freshest';
 
 const Splash = (props) => {
         let token = localStorage.getItem('token')
+        let numba = localStorage.getItem('num')
         const dispatch = useDispatch();
+
+        useEffect(() => {
+            console.log(props,token, numba)
+        })
+
         useEffect(() => {
             dispatch(getAllRestaurants())
  
