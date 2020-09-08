@@ -6,6 +6,18 @@
     .title {
         margin-top: 45px;
     }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+
+    .have-account {
+        font-size: 1.1em;
+        a {
+            color: blue;
+        }
+    }
     form {
         display: flex;
         flex-direction: column;
@@ -15,13 +27,15 @@
             margin: 10px 0;
             width: 100%;
             font-size: 1.3em;
+            border-radius: 6px;
         }
 
         .register-button {
             font-size: 1.3em;
             padding: 1%;
             width: 100%;
-            margin-top: 25px;
+            margin-top: 15px;
+            border-radius: 6px;
         }
     }
 }

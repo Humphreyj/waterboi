@@ -5,7 +5,8 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAILURE,
     LOGOUT,
-    LOGGED_IN
+    LOGGED_IN,
+    AUTHENTICATE
 } from '../types';
 
 const initialState = {
@@ -21,6 +22,12 @@ const authReducer = (state = initialState, action) => {
         case LOGGED_IN:
             return {
                 ...state,
+                loggedIn: true
+            }
+        case AUTHENTICATE:
+            return {
+                ...state,
+                data: action.payload,
                 loggedIn: true
             }
         case LOGIN_TOGGLE:

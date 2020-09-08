@@ -13,7 +13,7 @@ const Restaurant = (props) => {
                 className = 'stars'
                 name="rate1" 
                 starCount={5}
-                value={props.rating}
+                value={parseInt(props.rating)}
                 editing={false}
                 
                 />

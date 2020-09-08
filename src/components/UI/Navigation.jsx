@@ -26,7 +26,7 @@ const Navigation = (props) => {
                     {props.loggedIn ? null :<Link to='/register' onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>Signup</Link>}
 
                     {/* if logged in display link to profile. */}
-                {props.loggedIn ? <Link to={`/profile/${props.user.display}/${props.user.id}`} onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>My Profile</Link> : null}
+                {props.loggedIn ? <Link to={`/profile/${props.user.display_name}/${props.user.id}`} onClick={()=>setDrawerIsOpen(!drawerIsOpen)}>My Profile</Link> : null}
                 </div>
             </div>
             

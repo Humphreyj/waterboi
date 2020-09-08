@@ -2,23 +2,21 @@ import React,{useEffect} from 'react';
 import {connect,useDispatch} from 'react-redux';
 
 import {getAllRestaurants} from '../../Redux/actions/restaurantActions';
+import { authenticate } from '../../Redux/actions/authActions';
 
 
 import Featured from './Featured'
 import Freshest from './Freshest';
 
 const Splash = (props) => {
-        let token = localStorage.getItem('token')
-        let numba = localStorage.getItem('num')
+
         const dispatch = useDispatch();
 
-        useEffect(() => {
-            console.log(props,token, numba)
-        })
+    
 
         useEffect(() => {
+            dispatch(authenticate())
             dispatch(getAllRestaurants())
- 
             console.log(props)
         },[dispatch])
 

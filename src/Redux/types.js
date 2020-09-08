@@ -9,6 +9,9 @@ export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const LOGOUT = 'LOGOUT';
 
+//authenticate
+export const AUTHENTICATE = 'AUTHENTICATE';
+
 //get restaurants
 export const GET_RESTAURANTS = 'GET_RESTAURANTS';
 //single restaurant

@@ -5,11 +5,11 @@ import Review from './Review';
 
 const DisplayReviews = (props) => {
     const dispatch = useDispatch();
-    console.log(props)
+    
     useEffect(() => {
         dispatch(getRestaurantReviews(props.match))
         
-    },[props.length])
+    },[props.length,dispatch, props.match])
     return (
         <div>
             {props.state?.map(item => {

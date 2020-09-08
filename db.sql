@@ -46,11 +46,16 @@ SELECT Avg(rating) FROM reviews WHERE id = id;
 #get avergae rating and count of reviews for a group
 SELECT restaurant_id, location, Avg(rating), count(rating) FROM reviews GROUP BY restaurant_id;
 
+
+
+
+
 #Join users and review tables
 SELECT restaurant_id,display_name,content,rating FROM reviews INNER JOIN users ON reviews.users_id = users.id;
 
 #Join users and review tables, get all reviews for specific restaurant
 SELECT restaurant_id,display_name,content,rating FROM reviews INNER JOIN users ON reviews.users_id = users.id WHERE restaurant_id = restaurant_id;
+
 
 #JOIN RESTAURANTS AND reviews
 SELECT * FROM restaurants INNER JOIN reviews ON restaurants.id = reviews.restaurant_id;

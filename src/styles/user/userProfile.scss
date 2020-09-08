@@ -1,0 +1,21 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    .user-heading {
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .welcome {
+            
+        }
+    }
+   
+}

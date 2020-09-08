@@ -1,11 +1,40 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import {connect,useDispatch} from 'react-redux';
+import { authenticate } from '../../Redux/actions/authActions';
+import blankie from '../../img/blankie.jpg';
 
-const UserProfile = () => {
+
+const UserProfile = (props) => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+            
+            dispatch(authenticate())
+            console.log(props.user)
+        
+    },[dispatch])
+    
+
+
+    console.log(props)
     return (
-        <div>
-            This my profile
+        <div className='user-profile'>
+            
+            <div className="user-heading">
+            <img src={blankie} alt={`${props.user.first_name}`}/>
+            <h3 className="welcome">Welcome, {props.user.display_name}</h3>
+            </div>
+            <h4 className="location">{props.user.location}</h4>
+            
         </div>
     );
 }
 
-export default UserProfile;
+const mapStateToProps = (state) => {
+    return {
+        user: state.auth.data,
+    }
+}
+
+export default connect(mapStateToProps)(UserProfile);

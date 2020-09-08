@@ -58,9 +58,10 @@ const Login = (props) => {
                 <button className="login-button">Log in!</button>
             </form>    
 
-            <p 
+          
+            <i 
             onClick={hideLogin}
-            className="cancel">Cancel</p>       
+            className="far fa-window-close cancel fa-2x"></i>       
         </div>
     );
 }

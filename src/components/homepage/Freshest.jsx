@@ -7,9 +7,10 @@ const Freshest = (props) => {
     return (
     <section className='freshest'>
         <h6>The Freshest Waters</h6>
-        {freshest?.map(item => {
+        {freshest?.map((item,i) => {
                     return(
                         <Restaurant 
+                        key={i}
                         name={item.restaurant_name}
                         location={item.address}
                         rating={item.average_rating}

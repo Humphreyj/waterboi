@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import {connect,useDispatch} from 'react-redux';
 import {getSingleRestaurant} from '../../Redux/actions/restaurantActions';
+import {authenticate} from '../../Redux/actions/authActions';
 import DisplayReviews from './reviews/DisplayReviews';
 import StarRatingComponent from 'react-star-rating-component';
 
@@ -14,6 +15,7 @@ const RestuarantDetails = (props) => {
     
 
     useEffect(()=> {
+        dispatch(authenticate())
         dispatch(getSingleRestaurant(match))
     },[dispatch,match])
 

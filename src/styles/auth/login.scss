@@ -1,23 +1,37 @@
 .login-page {
     display: flex;
     top: 10px;
-    left: 10px;
+    left: 14px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    height: 350px;
+    border-radius: 6px;
+    height: 400px;
     position: absolute;
     background-color: white;
+    z-index: 300;
     .title {
-        margin-top: 30px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 1.3em;
         
     }
     .new-to-walp {
         text-align: center;
         h6 {
-           
+           font-size: 1.1em;
+           margin: 10px 0;
+
+           a {
+               color: blue;
+           }
         }
+    }
+
+    .tos {
+        width: 80%;
+        margin: 0 auto;
     }
 
     .log-in-form {
@@ -27,15 +41,22 @@
         align-items: center;
 
         input {
-            
+            font-size: 1.2em;
             margin: 10px 0;
         }
 
         .login-button {
-            width: 100%;
+            width: 70%;
             margin-top: 20px;
             padding: 1%;
+            font-size: 1.1em;
+            border-radius: 6px;
+
         }
+    }
+    .cancel {
+        color: red;
+        margin-top: 15px;
     }
 }
 .hidden {

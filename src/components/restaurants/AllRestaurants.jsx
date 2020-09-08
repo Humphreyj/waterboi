@@ -10,19 +10,20 @@ const AllRestaurants = (props) => {
     const dispatch = useDispatch()
     const [restaurantMaster, setRestaurantMaster] = useState(all)
     const [input, setInput] = useState('');
-    let newList = [];
+    
 
     useEffect(() => {
         if (props.state.length === 0) {
             dispatch(getAllRestaurants())
         }
-    },[])
+    },[dispatch, props.state.length])
     
     useEffect(() => {
         setRestaurantMaster(all)
     },[all])
 
     useEffect(() => {
+        let newList = [];
         if(input !== '') {
 			newList = all.filter(item => {
 					return item.name.toLowerCase().indexOf(input.toLowerCase()) !== -1
@@ -32,7 +33,7 @@ const AllRestaurants = (props) => {
 		}else if(input === '') {
 			setRestaurantMaster(all)
 		}
-    },[input])
+    },[input,all])
     //Filters the list of restaurants based on the search term.
     const handleChange = (e) => {
 		setInput(e.target.value);		
@@ -52,9 +53,10 @@ const AllRestaurants = (props) => {
             type="text"/>
             
             {
-                restaurantMaster?.map(item => {
+                restaurantMaster?.map((item,i) => {
                     return (
                         <Restaurant 
+                        key={i}
                         click={()=>selectRestaurant(item.id)}
                         name={item.restaurant_name}
                         location={item.address}
