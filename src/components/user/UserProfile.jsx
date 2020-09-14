@@ -13,7 +13,7 @@ const UserProfile = (props) => {
             dispatch(authenticate())
             console.log(props.user)
         
-    },[dispatch])
+    },[dispatch,props.user])
     
 
 
