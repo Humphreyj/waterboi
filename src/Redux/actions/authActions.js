@@ -68,7 +68,7 @@ export const logout = () => (dispatch) => {
     localStorage.clear()
     return axios
     
-            .get('http://localhost:5000/api/auth/logout')
+            .get(`${process.env.REACT_APP_BACKEND}/auth/logout`)
             .then(res => {
                 console.log(res)
                 localStorage.clear()
@@ -84,7 +84,7 @@ export const logout = () => (dispatch) => {
 
 export const authenticate = () => (dispatch) => {
     axiosAuth
-    .get('http://localhost:5000/api/auth/session')
+    .get(`${process.env.REACT_APP_BACKEND}/auth/session`)
     .then(res => {
 
         dispatch({

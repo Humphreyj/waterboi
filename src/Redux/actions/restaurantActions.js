@@ -9,7 +9,7 @@ import {
 } from '../types'
 
 export const getAllRestaurants = () => (dispatch) => {
-    axios.get(`http://localhost:5000/api/restaurants`)
+    axios.get(`${process.env.REACT_APP_BACKEND}/restaurants`)
     .then(res => {
         console.log(res.data)
         dispatch({
@@ -24,7 +24,7 @@ export const getAllRestaurants = () => (dispatch) => {
 
 export const getSingleRestaurant = (id) => (dispatch) => {
     axios
-    .get(`http://localhost:5000/api/restaurants/${id}`)
+    .get(`${process.env.REACT_APP_BACKEND}/restaurants/${id}`)
     .then(res => {
         dispatch({
             type: GET_SINGLE_RESTAURANT,
@@ -37,7 +37,7 @@ export const getSingleRestaurant = (id) => (dispatch) => {
 }
 
 export const getRestaurantReviews = (id) => (dispatch) => {
-    axios.get(`http://localhost:5000/api/restaurants/${id}/reviews`)
+    axios.get(`${process.env.REACT_APP_BACKEND}/restaurants/${id}/reviews`)
     .then(res => {
         dispatch({
             type: GET_RESTAURANT_REVIEWS,
@@ -51,7 +51,7 @@ export const getRestaurantReviews = (id) => (dispatch) => {
 }
 
 export const addNewReview = (id,newReview) => (dispatch) => {
-    axiosAuth.post(`http://localhost:5000/api/restaurants/${id}/reviews`, newReview)
+    axiosAuth.post(`${process.env.REACT_APP_BACKEND}/restaurants/${id}/reviews`, newReview)
     .then(res => {
        console.log(res)
         
