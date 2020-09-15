@@ -18,7 +18,7 @@ const Splash = (props) => {
             dispatch(authenticate())
             dispatch(getAllRestaurants())
             console.log(props)
-        },[dispatch,props])
+        },[])
 
         
 
