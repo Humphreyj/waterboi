@@ -12,7 +12,7 @@ const UserProfile = (props) => {
             
             dispatch(authenticate())
             console.log(props.user)
-        
+         // eslint-disable-next-line
     },[])
     
 

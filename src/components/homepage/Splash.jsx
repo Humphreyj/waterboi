@@ -18,6 +18,7 @@ const Splash = (props) => {
             dispatch(authenticate())
             dispatch(getAllRestaurants())
             console.log(props)
+             // eslint-disable-next-line
         },[])
 
         
