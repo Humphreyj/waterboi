@@ -27,8 +27,8 @@ const RestuarantDetails = (props) => {
                 <img src="#" alt="Restaurant"/>
                 <div>
                     
-                    <h4 className='restaurant-name'>{props.state.name}</h4>
-                    <h4 className='location'>{props.state.location}</h4>
+                    <h4 className='restaurant-name'>{props.state.restaurant_name}</h4>
+                    <h4 className='location'>{props.state.address}</h4>
                     <h4 className='price-range'>Price range: {props.state.price_range}</h4>
                     <StarRatingComponent 
                 name="rate1" 

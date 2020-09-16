@@ -1,5 +1,5 @@
 .restaurant-container {
-    height: 90px;
+    height: 95px;
     border-top: .5px solid rgba(0,0,0,0.2);
     border-bottom: .5px solid rgba(0,0,0,0.2);
     display: flex;
@@ -20,7 +20,12 @@
             margin-bottom: 0;
         }
         .restaurant-name {
-            font-size: 1.17em;
+            font-size: 1.25em;
+            font-family: 'Fira Sans', sans-serif;
+        }
+        .restaurant-location {
+            font-family: 'Oxygen', sans-serif;
+            font-size: .9em;
         }
 
         .stars {

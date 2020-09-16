@@ -21,7 +21,7 @@ export const checkToken = () => (dispatch) => {
 
 export const registerUser = (data) => (dispatch) => {
     return axios
-            .post(`http://localhost:5000/api/auth/register`, data)
+            .post(`${process.env.REACT_APP_BACKEND}`, data)
             .then(res => {
                 console.log(res)
                 window.location = '/login';
@@ -45,7 +45,7 @@ export const loginToggle = () => (dispatch) => {
 
 export const userLogin = (userData) => (dispatch) => {
     return axios
-            .post(`http://localhost:5000/api/auth/login`, userData)
+            .post(`${process.env.REACT_APP_BACKEND}/auth/login`, userData)
             .then(res => {
                 console.log(res.data)
                 

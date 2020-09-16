@@ -13,11 +13,11 @@ import './styles/global.scss';
 
 
 function App() {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(authenticate())
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //   dispatch(authenticate())
     
-  },[dispatch])
+  // },[dispatch])
   return (
     <Router>
       <div className="App">

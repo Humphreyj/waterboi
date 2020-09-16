@@ -7,13 +7,19 @@ const Featured = (props) => {
     const newArr = [...props.state]
     const sorted = newArr.sort((a,b) =>  a.average_rating < b.average_rating ? 1 : -1)
     const coolest = sorted.slice(0,3)
+    console.log(props)
+    const selectRestaurant = (id) => {
+        window.location =`/restaurants/${id}`;
+        console.log(props)
+    }
     return (
         <section className="coolest-container">
                 <h6 className='coolest-title'>This weeks coolest waters.</h6>
                 
                 {coolest?.map((item,i) => {
                     return(
-                        <Restaurant 
+                        <Restaurant
+                        click={()=>selectRestaurant(item.id)} 
                         key = {i}
                         name={item.restaurant_name}
                         location={item.address}
