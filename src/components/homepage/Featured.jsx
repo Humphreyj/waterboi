@@ -24,6 +24,7 @@ const Featured = (props) => {
                         name={item.restaurant_name}
                         location={item.address}
                         rating={item.average_rating}
+                        count={item.count}
                         />
                     )
                 })}

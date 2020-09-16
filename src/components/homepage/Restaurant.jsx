@@ -9,6 +9,7 @@ const Restaurant = (props) => {
             <div className="restaurant-info">
                 <p className='restaurant-name' >{props.name}</p>
                 <p className='restaurant-location'>{props.location}</p>
+                <div className="rating">
                 <StarRatingComponent 
                 className = 'stars'
                 name="rate1" 
@@ -17,6 +18,10 @@ const Restaurant = (props) => {
                 editing={false}
                 
                 />
+                {props.count === 1 ? <p className="review-count">{props.count} review</p> : <p className="review-count">{props.count} reviews</p>}
+
+                </div>
+                
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
-import React,{useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import React from 'react';
+// import {useDispatch} from 'react-redux';
 
-import {authenticate} from './Redux/actions/authActions'
+// import {authenticate} from './Redux/actions/authActions'
 import './App.css';
 import Navigation from './components/UI/Navigation';
 import Routes from './Routes/Routes';

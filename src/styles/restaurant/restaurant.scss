@@ -14,7 +14,8 @@
         padding: 0 5px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+    
+        align-items: flex-start;
         p {
             margin-top: 0;
             margin-bottom: 0;
@@ -22,14 +23,28 @@
         .restaurant-name {
             font-size: 1.25em;
             font-family: 'Fira Sans', sans-serif;
+            color: rgb(67, 121, 157);
+            font-weight: bold;
         }
         .restaurant-location {
             font-family: 'Oxygen', sans-serif;
             font-size: .9em;
         }
+        .rating {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            
 
-        .stars {
-            margin-right: 165px;
+            .stars {
+            
+            }
+            .review-count {
+                font-size: .8em;
+                margin-left: 5px;
+                color: rgb(168, 168, 168);
+            }
         }
+        
     };
 }
