@@ -20,7 +20,7 @@ export const checkToken = () => (dispatch) => {
 //register
 
 export const registerUser = (data) => (dispatch) => {
-    return axios
+    return axiosAuth
             .post(`${process.env.REACT_APP_BACKEND}`, data)
             .then(res => {
                 console.log(res)
@@ -44,7 +44,7 @@ export const loginToggle = () => (dispatch) => {
 }
 
 export const userLogin = (userData) => (dispatch) => {
-    return axios
+    return axiosAuth
             .post(`${process.env.REACT_APP_BACKEND}/auth/login`, userData)
             .then(res => {
                 console.log(res.data)
